@@ -30,5 +30,23 @@ namespace FindMaxNumTest
             int result = maxNumber.FindMaxInteger(10, 5, 15);
             Assert.AreEqual(15, result);
         }
+        [Test]
+        public void GivenMaxFirstNumFloat_WhenAnalysed_ShouldReturnFirstMax()
+        {
+            float result = maxNumber.FindMaxFloat(15.0F, 5, 10);
+            Assert.AreEqual(15, result);
+        }
+        [Test]
+        public void GivenMaxSecondNumFloat_WhenAnalysed_ShouldReturnSecondMax()
+        {
+            float result = maxNumber.FindMaxFloat(5, 15.0F, 10);
+            Assert.AreEqual(15, result);
+        }
+        [Test]
+        public void GivenMaxThirdNumFloat_WhenAnalysed_ShouldReturnThirdMax()
+        {
+            float result = maxNumber.FindMaxFloat(10, 5, 15.0F);
+            Assert.AreEqual(15, result);
+        }
     }
 }
